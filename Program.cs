@@ -31,4 +31,5 @@ class Program
             sum += v;
         return sum / values.Length;
     }
+    Console.WriteLine("Minor update on main branch");
 }
