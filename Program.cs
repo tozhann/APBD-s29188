@@ -24,6 +24,9 @@ class Program
         Console.WriteLine($"Hello, {name}!");
     }
     
+    foreach (var v in values)
+    if (v < min) min = v;
+    
     static double CalculateAverage(int[] values)
     {
         double sum = 0;
