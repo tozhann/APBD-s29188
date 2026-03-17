@@ -31,5 +31,21 @@ class Program
             sum += v;
         return sum / values.Length;
     }
+    
+    static int CalculateMin(int[] values)
+    {
+        int min = values[0];
+            
+<<<<<<< HEAD
     Console.WriteLine("Minor update on main branch");
+=======
+    
+    static int CalculateMax(int[] values)
+    {
+        int max = values[0];
+        foreach (var v in values)
+            if (v > max) max = v;
+        return max;
+    }
+>>>>>>> feature-max
 }
