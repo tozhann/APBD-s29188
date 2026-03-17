@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("This change is from main branch");
+        Console.WriteLine("This change is from feature-conflict branch");
 
         GreetUser("Taha");
 
