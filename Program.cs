@@ -31,4 +31,12 @@ class Program
             sum += v;
         return sum / values.Length;
     }
+    
+    static int CalculateMax(int[] values)
+    {
+        int max = values[0];
+        foreach (var v in values)
+            if (v > max) max = v;
+        return max;
+    }
 }
