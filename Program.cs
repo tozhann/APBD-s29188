@@ -1,16 +1,26 @@
-Console.WriteLine("Hello APBD Git!");
-Console.WriteLine("Task 2: First small change");
+using System;
 
-static void GreetUser(string name)
+class Program
 {
-    Console.WriteLine($"Hello, {name}!");
-}
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello APBD Git!");
+        Console.WriteLine("Task 2: First small change");
 
-int userAge = 21;
-Console.WriteLine($"User age: {userAge}");
+        GreetUser("Taha");
 
-string userName = "";
-if(string.IsNullOrEmpty(userName))
-{
-    Console.WriteLine("Error: userName is empty!");
+        int userAge = 21;
+        Console.WriteLine($"User age: {userAge}");
+
+        string userName = "";
+        if (string.IsNullOrEmpty(userName))
+        {
+            Console.WriteLine("Error: userName is empty!");
+        }
+    }
+
+    static void GreetUser(string name)
+    {
+        Console.WriteLine($"Hello, {name}!");
+    }
 }
