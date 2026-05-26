@@ -1,0 +1,30 @@
+@{ ViewData["Title"] = "Admin Panel"; }
+
+<h2 class="mb-4">Admin Panel</h2>
+<p class="text-muted">Only admins can see this page.</p>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Registered</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in (IEnumerable<dynamic>)Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Email</td>
+                <td>
+                    <span class="badge @(user.Role == "Admin" ? "bg-danger" : "bg-secondary")">
+                        @user.Role
+                    </span>
+                </td>
+                <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
